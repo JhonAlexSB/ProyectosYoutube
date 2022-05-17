@@ -150,3 +150,40 @@ Se pasan las urls.py de misitio a miapp
   Se boran las importaciones de views en misitio.urls.py
   y Se crean las importaciones en miapp/urls.py de views
 
+
+>>>>
+52:25
+  DATABASE MODELS
+
+> Instalacion de gestor de bd sqlite
+
+>>Desde el navegador
+  - entrar en direccion sqlitebrowser.org/dl/ y descargar la version para el sistema operativo
+
+> Abrir archivo db.sqlite3 con la aplicacion instalada
+
+> Para hacer migraciones
+  python manage.py makemigrations
+> No hace nada por que ya viene con migraciones echas
+  python manage.py migrate
+
+> Eventualmente se usara la carpeta /miapp/migrations
+> Modificamos el archivo miapp/models.py
+> Despues ejecutamos en consola, posteriormente no hay diferencia
+  python manage.py runserver
+
+> Modificamos el archivo misitio/settings.py
+> Volvemos a ejecutar en cosola sin error
+  python manage.py runserver
+
+> Creamos el archivo miapp/migrations/0001_initial.py con el siguiente comando
+que ejecuta las nuevas migraciones 
+
+  python manage.py makemigrations miapp
+
+- Ese archivo es parte de la ORM de django para manegar la base de datos
+
+  python manage.py migrate miapp
+
+> Es como una actualizacion de la tabla ORM creada si se actualiza en la
+aplicacion sqlitebrowser se notara el incremento de 11 tablas a 12
