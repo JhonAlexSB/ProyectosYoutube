@@ -137,3 +137,16 @@ miapp/models.py
 modificar miapp/views.py
 modificar misitio/urls.py
 
+>>>>
+46:51
+  Include
+
+Crear archivo en miapp llamado urls.py
+  miapp/urls.py
+
+Se pasan las urls.py de misitio a miapp
+  misitio/urls.py
+
+  Se boran las importaciones de views en misitio.urls.py
+  y Se crean las importaciones en miapp/urls.py de views
+
