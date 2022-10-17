@@ -1,0 +1,55 @@
+
+>>>>
+3:34
+  Programas
+
+Instalacion Python
+
+>> Ver versiones
+python --version
+pip --version
+django-admin --version
+python -m django --version
+
+Versiones de programas del video
+python 3.10.6
+pip 22.2.1
+virtualenv 20.16.4
+django 4.1
+
+Actualizar pip
+$ pip install --upgrade pip
+
+>>>>
+10:50
+  VirtualEnv
+
+Instalar herramienta de virtualizacion
+  pip install virtualenv
+
+Crear entorno virtual
+  virtual env 
+
+Activar entorno virtual "Termux"
+  srca
+Desactivar entorno virtual "Termux"
+  srcd
+
+
+>>>>
+17:11
+  Instalar Django
+
+>>
+Entrar en el entorno virtual
+  Termux
+  srca  -  source env/bin/activate
+
+>>
+Salir del entorno virtual
+  Termux
+  srcd  -  deactivate
+
+>> 
+Ver si se instalo correctamente es revisar la version 'codigo en primeras lineas'
+
