@@ -107,3 +107,25 @@ Creacion de una App
 
 python manage.py startapp miapp
 
+>>>>
+37:44
+  Estructura de una app
+
+miapp/views.py
+  Lo que envia al ciente y archivo principal
+
+miapp/migration/
+  Se llenara cuando se use la base de datos
+
+>>
+  Django viene con ORM para usar base de datos con codigo de python y no SQL
+
+miapp/admin.py
+  Crear datos,usuarios,roles
+
+miapp/apps.py
+  Es un equivalente a settings.py
+
+miapp/models.py
+  Crear clases que sera tablas para sql
+
