@@ -80,3 +80,25 @@ Crear proyecto con django
   python manage.py runserver 3000
 
 
+>>>>
+  24:27
+Estructura de proyecto
+
+>>
+  settings.py
+allowed_host=[] -> Que host tienen permitido conectarse
+debug=true -> Sirve para obtener informacion en desarrollo
+secrect_key -> Sirve para encriptar y compartir informacion con el navegador
+installed_apps=[] -> Aplicaciones instaladas en el proyecto
+databases={} -> Para seleccionar que base de datos usar 
+
+>>
+  umisitio/urls.py
+Las direcciones que los usuarios pueden visitar
+
+>>
+  misitio/asgi.py
+  misitio/wsgi.py
+Sirven para servir contenido
+
+
