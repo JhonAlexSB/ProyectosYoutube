@@ -1,3 +1,11 @@
+Link video youtube:
+https://youtu.be/T1intZyhXDU
+
+Titulo:
+  Django, Curso de Django para Principiantes
+
+Autor:
+  Fazt
 
 >>>>
 3:34
@@ -52,4 +60,23 @@ Salir del entorno virtual
 
 >> 
 Ver si se instalo correctamente es revisar la version 'codigo en primeras lineas'
+
+>>>>
+  19:30
+Crear proyecto de django
+
+Crear proyecto con django
+    >> Esta se borra y se usa la siguiente linea
+  django-admin startproject misitio
+  django-admin startproject misitio .
+>> Esto crea la carpeta misitio y el archivo manage.py
+
+>> Arancar servidor
+  python manage.py runserver
+>> Esto creara un archivo llamado db.sqlite3
+
+
+>> Arancar servidor con puerto especifico
+  python manage.py runserver 3000
+
 
