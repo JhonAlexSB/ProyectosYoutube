@@ -101,4 +101,9 @@ Las direcciones que los usuarios pueden visitar
   misitio/wsgi.py
 Sirven para servir contenido
 
+>>>>
+  32:57
+Creacion de una App
+
+python manage.py startapp miapp
 
