@@ -61,6 +61,8 @@ Salir del entorno virtual
 >> 
 Ver si se instalo correctamente es revisar la version 'codigo en primeras lineas'
 
+pip install django
+
 >>>>
   19:30
 Crear proyecto de django
@@ -161,9 +163,9 @@ Se pasan las urls.py de misitio a miapp
   - entrar en direccion sqlitebrowser.org/dl/ y descargar la version para el sistema operativo
 
 > Abrir archivo db.sqlite3 con la aplicacion instalada
-
 > Para hacer migraciones
   python manage.py makemigrations
+
 > No hace nada por que ya viene con migraciones echas
   python manage.py migrate
 
@@ -176,14 +178,28 @@ Se pasan las urls.py de misitio a miapp
 > Volvemos a ejecutar en cosola sin error
   python manage.py runserver
 
-> Creamos el archivo miapp/migrations/0001_initial.py con el siguiente comando
-que ejecuta las nuevas migraciones 
-
+> Creamos el archivo miapp/migrations/0001_initial.py con el siguiente comando que ejecuta las nuevas migraciones 
   python manage.py makemigrations miapp
 
-- Ese archivo es parte de la ORM de django para manegar la base de datos
-
+- Ese archivo es parte de la ORM de django para manegar la base de datos y se
+  crea automaticamente
   python manage.py migrate miapp
 
 > Es como una actualizacion de la tabla ORM creada si se actualiza en la
 aplicacion sqlitebrowser se notara el incremento de 11 tablas a 12
+
+----- 1:02:37 Agregar otra clase llamada tareas
+> Modificamos el archivo miapp/models.py
+
+> Ejecutamos en consola
+  python manage.py makemigrations
+
+> Creara automaicamento otro archivo, un miapp/migrations/0002_task.py
+> El siguiente comando agregara en db.sqlite3 otra tabla que podremos ver
+con sqlitebrowser, se notara el incremento de 12 tablas a 13
+  python manage.py migrate
+
+> ?Como cambiar el gestor de base de datos?
+ir a la documentacion oficial de django buscadonla en internet por django
+databases o en la url docs.djangoproject.com/en/4.1/ref/databases/
+
