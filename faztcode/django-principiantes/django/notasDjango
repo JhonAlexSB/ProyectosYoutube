@@ -1,6 +1,6 @@
 Link video youtube:
 https://youtu.be/T1intZyhXDU
-
+  
 Titulo:
   Django, Curso de Django para Principiantes
 
@@ -202,4 +202,53 @@ con sqlitebrowser, se notara el incremento de 12 tablas a 13
 > ?Como cambiar el gestor de base de datos?
 ir a la documentacion oficial de django buscadonla en internet por django
 databases o en la url docs.djangoproject.com/en/4.1/ref/databases/
+
+>>>>
+1:08:11
+  Django Shell
+
+python manage.py shell
+
+> Se importaran las tablas para usarlas y se insertaran datos
+  from miapp.models import Project, Task
+  p = Project(name="aplicacion movil")
+  p
+  p.save()
+  p = Project(name="aplicacion web usando Django")
+
+> Se listaran todos los datos de la tabla Project
+  Project.objects.all()
+> Retornara esto varios objetos
+  <QuerySet [<Project: Project object (1)>, <Project: Project object (2)>]>
+
+> Buscar por parametro
+  Project.objects.get(id=1)
+  Project.objects.get(name="aplicacion movil")
+
+> Para salir del interprete
+  exit()
+
+> Crear una tarea referenciando un projecto
+  from miapp.models import Project, Task
+  p = Project.objects.get(id=1)
+  p.task_set.all()
+
+> Lo ultimo retorna un query basio " <QuerySet []> " por que no hay ninguna
+tarea relacionada con ese projecto
+
+  p.task_set.create(title="descargar IDE")
+
+> La linea anterior crea una fila en tarea vinculada al projecto 1
+
+  p.task_set.create(title="desarrollar login")
+  p.task_set.all()
+
+> Lo ultimo retornara dos objetos que se crearon recientemente
+
+  Project.objects.filter(name="movil")
+
+> Lo anterior es para que no nos retorne error en una busqueda si no un queryset
+basio
+
+  Project.objects.filter(name__startswith="aplicacion")
 
