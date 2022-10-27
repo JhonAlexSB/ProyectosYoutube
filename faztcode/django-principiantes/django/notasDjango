@@ -252,3 +252,13 @@ basio
 
   Project.objects.filter(name__startswith="aplicacion")
 
+
+>>>>
+1:19:56
+  Params
+  
+miapp/urls.py
+miapp/views.py
+
+> se modificaron estos valores para obetner por el url del navegador un username
+
