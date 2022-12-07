@@ -1,0 +1,95 @@
+URL:
+
+
+overthewire.org/wargames/bandit
+
+
+bandit.labs.overthewire.org
+
+
+Conexion 
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+sftp -oPort=2220 bandit1@bandit.labs.overthewire.org 
+
+sftp -oPort=2220 bandit1@bandit.labs.overthewire.org 
+pass : bandit0
+
+<< bandit0
+>>> 5:22 > ssh bandit0@bandit.labs.overthewire.org -p 2220
+  cat readme
+
+
+<< bandit1
+>>> 7:08 > ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+  'Leer en el directorio actual'
+  ./-
+
+  $(pwd)/-
+  $(pwd)/*
+
+
+<< bandit2
+>>> 10:51 > ssh bandit2@bandit.labs.overthewire.org -p 2220 
+  "La clave esta en un archivo llamado 'spaces in this filename'"
+>>
+  cat 'spaces in this filename'
+  cat "spaces in this filename"
+  cat spaces\ in\ this\ filename\
+  cat sp*
+  cat ame*
+  cat *this*
+
+
+<< bandit3
+>>> 13:47 > ssh bandit3@bandit.labs.overthewire.org -p 2220 
+  "la clave esta oculta en un fichero oculto dentro del directorio 'inhere'"
+>>
+  la
+  ls -a
+  find .
+    '-f es tipo fichero'
+  find . -type f 
+  find . -type f -printf "%f\t%p\t%u\t%g\t%g\t%m\n" | column -t
+    'Buscar por nombre'
+  find . -name .hidden
+  find . -name .hidden | xargs cat
+
+    '$$ Retorna el fichero y la linea donde encuentr la coincidencia'
+  find . -type f | xargs grep "leaving"
+
+  cat .hidden
+
+
+<< bandit4
+>>> 19:21 > ssh bandit4@bandit.labs.overthewire.org -p 2220 
+  "la clave esta almcenada en un archivo legible de la carpeta 'inhere'"
+>>
+
+  chattr
+  chattr -i -V file.txt
+  lsattr
+
+  28:58
+  which file
+  hexeditor
+  file file.txt
+
+  file inhere/*
+  find . -name -file* | xargs file
+
+  '$$ Medir tiempo'
+  time file inhere/*
+  time find . -name -file* | xargs file
+
+  cat $(find . -name -file07)
+  find . -name -file07 | xargs cat
+
+
+<< bandit5
+>>> 34:10 > ssh bandit5@bandit.labs.overthewire.org -p 2220 
+  "la clave esta en algun sitio de inhere con las siguiente propiedades"
+  "humanamente comprensible, 1033 bytes in size, no ejecutable"
+>>
+
+
