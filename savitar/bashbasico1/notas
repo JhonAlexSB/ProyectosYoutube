@@ -9,14 +9,15 @@ bandit.labs.overthewire.org
 
 Conexion 
 ssh bandit0@bandit.labs.overthewire.org -p 2220
-sftp -oPort=2220 bandit1@bandit.labs.overthewire.org 
+sftp -oPort=2220 bandit0@bandit.labs.overthewire.org 
 
-sftp -oPort=2220 bandit1@bandit.labs.overthewire.org 
 pass : bandit0
 
 << bandit0
 >>> 5:22 > ssh bandit0@bandit.labs.overthewire.org -p 2220
   cat readme
+
+NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 
 
 << bandit1
@@ -27,6 +28,8 @@ pass : bandit0
 
   $(pwd)/-
   $(pwd)/*
+
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 
 
 << bandit2
@@ -39,6 +42,8 @@ pass : bandit0
   cat sp*
   cat ame*
   cat *this*
+
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 
 
 << bandit3
@@ -55,10 +60,12 @@ pass : bandit0
   find . -name .hidden
   find . -name .hidden | xargs cat
 
-    '$$ Retorna el fichero y la linea donde encuentr la coincidencia'
+    '$$ Retorna el fichero y la linea donde encuentro la coincidencia'
   find . -type f | xargs grep "leaving"
 
   cat .hidden
+
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 
 
 << bandit4
@@ -84,6 +91,8 @@ pass : bandit0
 
   cat $(find . -name -file07)
   find . -name -file07 | xargs cat
+
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 
 
 << bandit5
