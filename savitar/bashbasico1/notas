@@ -17,6 +17,9 @@ pass : bandit0
 >>> 5:22 > ssh bandit0@bandit.labs.overthewire.org -p 2220
   cat readme
 
+ruta de passwords
+/etc/bandit_pass/
+
 NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 
 
@@ -138,9 +141,34 @@ cat file | grep '^hola$' -n
 
 P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 
-<< bandit5
+<< bandit6
 >>> 45:00 > ssh bandit6@bandit.labs.overthewire.org -p 2220 
   "la clave esta en algun sitio del servidor con las siguiente propiedades"
-  "user owned bandit7, grup owned bandit6, 33 bytes in size"
+  "user owned bandit7, group owned bandit6, 33 bytes in size"
+>>
+
+find / - user bandit7 -group bandit6 -size 33c
+
+para mostrar solo las consultas que no retornaron error 
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+abrir firefox sin errores
+firefox >   /dev/null 2>&1 &
+
+independisar proceso firefox de la terminal
+disown -a
+  si de job not found
+disown 
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null | xargs cat
+
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+<< bandit7
+>>> 51:10 > ssh bandit7@bandit.labs.overthewire.org -p 2220 
+  "la clave esta en un fichero data.txt certa de la palabra millionth"
+  "Comandos que puedes necesitar para solucionar este nivel"
+  grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
 >>
 
