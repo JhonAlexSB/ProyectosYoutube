@@ -101,4 +101,46 @@ lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
   "humanamente comprensible, 1033 bytes in size, no ejecutable"
 >>
 
+  find . -type f -readable
+  find . -type f -readable -executable
+  find . -type f -readable ! -executable
+
+  find . -type f -readable ! -executable -size 1033c
+  find . -type f -readable ! -executable -size 1033c | xargs cat
+  find . -type f -readable ! -executable -size 1033c | xargs cat | xargs
+
+  find . -type f -readable ! -executable -size 1033c | xargs cat 
+
+tr : sirve para reemplazar ciertos caracteres
+
+Mostar las dos primeras lineas
+cat /etc/passwd | head -n2
+
+Mostar las dos ultimas lineas
+cat /etc/passwd | tail -n2
+
+Mostar la linea dos
+cat /etc/passwd | awk 'NR==2'
+
+Sustitucion en la primera coincidencia de la palabra root
+cat /etc/passwd | head -n1 | sed 's/root/noroot/'
+
+Sustitucion en todas las coincidencias de la palabra root
+cat /etc/passwd | head -n1 | sed 's/root/noroot/g'
+
+Buscar con grep especificamente la palabra inicial
+cat /etc/passwd | grep '^ro'
+
+find . -type f -readable ! -executable -size 1033c | xargs cat | sed 's/^ *//'
+
+Que comiene y termine tal cual y que marque el lugar de coincidencia
+cat file | grep '^hola$' -n
+
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+<< bandit5
+>>> 45:00 > ssh bandit6@bandit.labs.overthewire.org -p 2220 
+  "la clave esta en algun sitio del servidor con las siguiente propiedades"
+  "user owned bandit7, grup owned bandit6, 33 bytes in size"
+>>
 
