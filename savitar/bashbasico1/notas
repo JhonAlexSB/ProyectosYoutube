@@ -172,3 +172,42 @@ z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
   grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
 >>
 
+Contar cantidad de lineas
+cat data.txt | wc -l
+
+Contar cantidad de caracteres
+cat data.txt | wc -c
+
+Tarda menos el segundo
+cat data.txt | grep "millionth"
+grep "millionth"  data.txt
+
+cat data.txt | awk '/millionth/'
+
+Filtrar por argumento
+grep 'millionth' data.txt | awk '{print $2}'
+
+Filtra por ultimo argumento
+awk '/millionth/' data.txt | awk 'NF{print $NF}'
+
+Revirtiendo cadenas
+awk '/millionth/' data.txt | rev | awk '{print $1}' | rev
+
+Grep mostrar la linea donde esta la/s coincidencia
+grep 'millionth' data.txt -n
+
+Mostrar resultado por numero de linea
+awk 'NR==9441' data.txt
+
+TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+<< bandit8
+>>> 58:24 > ssh bandit8@bandit.labs.overthewire.org -p 2220 
+  "la clave esta en un archivo data.txt y es la unica linea de texto que ocurre
+  una ves"
+  "Comandos que puedes necesitar para solucionar este nivel"
+  grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
+>>
+
+
+
