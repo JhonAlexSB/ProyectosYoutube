@@ -284,6 +284,19 @@ cat data.txt | base64 -d | sed 's/ /\n/g' | tail -n
   grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
 >>
 
+abdcdefghijklmnopqrstuvwxyz
+cat data.txt | tr [G-ZA-Fg-za-f] [T-ZA-St-za-s]
+
+JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+<< bandit12
+>>> 1:19:20 > ssh bandit12@bandit.labs.overthewire.org -p 2220 
+"la clave esta en data.txt la cual es un hexdump de un fichero que ha sido
+contiunuamente comprimido" 
+"Comandos que puedes necesitar para solucionar este nivel"
+  grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
+>>
+
 
 
 
