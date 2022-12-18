@@ -227,6 +227,41 @@ EN632PlfYiZbn3PhVK3XOGSlNInNE00t
   grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
 >>
 
+Mostrar cadena de caracteres imprimible
+strings data.txt
+
+strings data.txt | grep '==='
+strings data.txt | grep '===' | tail -n1
+
+la '!$' se refiere al ultimo argumento de comando realizado
+
+touch bucle.sh
+chmod +x !$
+ls !$
+vim !$
+
+#!bin/bash/
+contador=1
+cat /etc/passwd | while read line; do
+  echo 'linea $contador: $line'
+  let contador+=1
+done
+
+while read line; do
+  echo 'linea $contador: $line'
+  let contador+=1
+done < /etc/passwd
+
+cont=1; strings data.txt | grep '===' | while read line; do echo "linea $cont: $line"; let cont+=1; done | awk 'NR==4' | awk 'NF{print $NF}'
+
+G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+<< bandit10
+>>> 1:11:43 > ssh bandit10@bandit.labs.overthewire.org -p 2220 
+  "la clave esta en data.txt que contiene una cadena en base64"
+  "Comandos que puedes necesitar para solucionar este nivel"
+  grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
+>>
 
 
 
