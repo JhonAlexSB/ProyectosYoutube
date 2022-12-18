@@ -263,5 +263,27 @@ G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
   grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
 >>
 
+echo 'hola que tal' | base64
+echo 'hola que tal' | base64 | base64 -d
+
+cat data.txt | base64 -d
+
+reemplazar espacios en saltos de linea
+cat data.txt | base64 -d | tr ' ' "\n"
+cat data.txt | base64 -d | sed 's/ /\n/g'
+
+
+cat data.txt | base64 -d | sed 's/ /\n/g' | tail -n
+
+6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+<< bandit11
+>>> 1:16:43 > ssh bandit11@bandit.labs.overthewire.org -p 2220 
+"la clave esta en data.txt todas las letras minusculas (a-z) y mayusculas (A-Z) se rotaron 30 posiciones" 
+"Comandos que puedes necesitar para solucionar este nivel"
+  grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
+>>
+
+
 
 
