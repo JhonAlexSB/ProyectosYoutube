@@ -209,5 +209,24 @@ TESKZC0XvTetK0S9xNwm25STk5iWrBvP
   grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
 >>
 
+Ordenamiento alfabetico
+cat data.txt | sort
+
+Mostrar las cadenas que no se repiten
+cat data.txt | sort | uniq -u
+sort data.txt | uniq -u
+
+
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+<< bandit9
+>>> 1:01:04 > ssh bandit9@bandit.labs.overthewire.org -p 2220 
+  "La clave esta en data.txt y es la unica cadena legible y esta despues de
+  muchos '=' "
+  "Comandos que puedes necesitar para solucionar este nivel"
+  grep,sort,uniq,strings,base64,tr,tar,gzip,bzip2,xxd
+>>
+
+
 
 
